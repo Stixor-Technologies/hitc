@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-black">
       <div className="container">
         <div className="flex flex-col justify-between gap-10 pt-16 lg:flex-row lg:gap-20">
-          <div className="xs:flex-row flex w-full flex-col justify-between gap-10 lg:order-1 lg:max-w-md xl:max-w-[36.875rem] xl:gap-0">
+          <div className="flex w-full flex-col justify-between gap-10 lg:order-1 lg:max-w-md xl:max-w-[36.875rem] xl:gap-0 xs:flex-row">
             <div className="flex-1">
               <h4 className="text-nowrap text-xs uppercase">Explore More</h4>
               <div className="mt-6 flex flex-col">
@@ -61,13 +61,13 @@ const Footer = () => {
 
             <div>
               <span>Book a consultation with us!</span>
-              <div className="xs:flex-row my-6 flex flex-col gap-6">
+              <div className="my-6 flex flex-col gap-6 xs:flex-row">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-light-black w-full max-w-[22.375rem] rounded-full px-3 py-2.5 shadow-[0_1px_0px_#ffffff]"
+                  className="w-full max-w-[22.375rem] rounded-full bg-light-black px-3 py-2.5 shadow-[0_1px_0px_#ffffff]"
                 />
-                <button className="text-light-black rounded-full bg-white px-4 py-2.5 duration-200 hover:bg-slate-200 ">
+                <button className="rounded-full bg-white px-4 py-2.5 text-light-black duration-200 hover:bg-slate-200 ">
                   Subscribe
                 </button>
               </div>
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <>
-          <hr className="border-stroke border-dark-gray my-6 h-0.5 w-full" />
+          <hr className="border-stroke my-6 h-0.5 w-full border-dark-gray" />
 
           <div className="flex flex-col items-center justify-between gap-2 pb-6 text-sm sm:flex-row">
             <p>

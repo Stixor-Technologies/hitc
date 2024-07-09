@@ -30,6 +30,7 @@ const config: Config = {
       },
       screens: {
         xs: "440px",
+        "min-aspect": { raw: "(min-aspect-ratio: 1/1)" },
       },
     },
   },

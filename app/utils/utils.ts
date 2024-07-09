@@ -1,24 +1,24 @@
 const sectionLinks = [
   {
-    id: 1,
+    id: "#home",
     title: "Home",
     path: "#",
   },
 
   {
-    id: 2,
+    id: "#about",
     title: "About",
     path: "#",
   },
 
   {
-    id: 3,
+    id: "#services",
     title: "Services",
     path: "#",
   },
 
   {
-    id: 4,
+    id: "#contact-us",
     title: "Contact Us",
     path: "#",
   },
