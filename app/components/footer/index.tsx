@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-black">
       <div className="container">
         <div className="flex flex-col justify-between gap-10 pt-16 lg:flex-row lg:gap-20">
-          <div className="flex w-full flex-col justify-between gap-10 lg:order-1 lg:max-w-md xl:max-w-[36.875rem] xl:gap-0 xs:flex-row">
+          <div className="flex w-full flex-col justify-between gap-10 xs:flex-row lg:order-1 lg:max-w-md xl:max-w-[36.875rem] xl:gap-0">
             <div className="flex-1">
               <h4 className="text-nowrap text-xs uppercase">Explore More</h4>
               <div className="mt-6 flex flex-col">
@@ -17,7 +17,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={link?.path}
-                    className="after:transition-width relative mb-3 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
+                    className="after:transition-width relative mb-5 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
                   >
                     {link.title}
                   </Link>
@@ -32,7 +32,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={link?.path}
-                    className="after:transition-width relative mb-3 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
+                    className="after:transition-width relative mb-5 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
                   >
                     {link?.title}
                   </Link>
@@ -47,7 +47,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={link?.path}
-                    className="after:transition-width relative mb-3 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
+                    className="after:transition-width relative mb-5 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
                   >
                     {link?.title}
                   </Link>
