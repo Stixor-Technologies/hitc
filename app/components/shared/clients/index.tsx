@@ -6,7 +6,7 @@ import Blob from "@/public/assets/blobs/client-blob.svg";
 
 const Clients = () => {
   return (
-    <div className="relative">
+    <section className="relative">
       <Image
         src={Blob}
         width={376}
@@ -38,7 +38,7 @@ const Clients = () => {
           ))}
         </ul>
       </Marquee>
-    </div>
+    </section>
   );
 };
 
