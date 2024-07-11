@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.swiper-pagination {
+  @apply !-bottom-8 !text-left lg:!-bottom-14;
+}
+
+.swiper-pagination-bullet {
+  @apply !h-0.5 !w-7 !rounded-none !bg-white;
+}

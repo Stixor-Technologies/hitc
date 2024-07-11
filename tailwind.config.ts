@@ -25,6 +25,9 @@ const config: Config = {
         "light-black": "#1D1E1C",
         "dark-gray": "#474747",
         "dark-silver": "#838383",
+        "smoke-black": "#0D0D0D",
+        "chinese-black": "#131313",
+        "light-silver": "#C9C9C9",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],

@@ -1,3 +1,5 @@
+import { Testimony } from "./types";
+
 const clientsData = [
   {
     id: 1,
@@ -35,4 +37,42 @@ const clientsData = [
   },
 ];
 
-export { clientsData };
+const TestimonialsData: Testimony[] = [
+  {
+    id: 1,
+    imageUrl: "/assets/testimonials/phill-mantis.png",
+    name: "Zoe Mantis",
+    designation: "Founder, Alpha Group",
+    testimony:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+  },
+
+  {
+    id: 2,
+    imageUrl: "/assets/testimonials/don-joe.png",
+    name: "Don Joe",
+    designation: "Founder, Alpha Group",
+    testimony:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+  },
+
+  {
+    id: 3,
+    imageUrl: "/assets/testimonials/zoe-mantis.png",
+    name: "Zoe Mantis",
+    designation: "Founder, Alpha Group",
+    testimony:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+  },
+
+  {
+    id: 4,
+    imageUrl: "/assets/testimonials/phill-mantis.png",
+    name: "Zoe Mantis",
+    designation: "Founder, Alpha Group",
+    testimony:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+  },
+];
+
+export { clientsData, TestimonialsData };
