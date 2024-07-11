@@ -24,6 +24,7 @@ const config: Config = {
         pink: "#BF4CF4",
         "light-black": "#1D1E1C",
         "dark-gray": "#474747",
+        "dark-silver": "#838383",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
