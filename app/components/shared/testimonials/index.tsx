@@ -18,7 +18,7 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
         <h2 className="text-3xl lg:text-5xl">Testimonials</h2>
       </div>
       <div className="container mt-7 px-0 lg:mt-10">
-        <div className="relative mt-3 h-[320px] w-full cursor-pointer overflow-visible md:mt-10 ">
+        <div className="relative mt-3 h-[20rem] w-full cursor-pointer overflow-visible md:mt-10 ">
           <div className="absolute left-0 list-none overflow-visible !px-4 sm:!px-8 lg:!px-[2.625rem]">
             <Swiper
               slidesPerView={"auto"}
@@ -34,7 +34,7 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
                 return (
                   <SwiperSlide
                     key={testimony?.id}
-                    className={`relative max-w-[422px] `}
+                    className={`relative w-full max-w-[26.375]`}
                   >
                     <ul className="relative flex flex-1">
                       <li className="bg-smoke-black text-light-silver flex-1 rounded-2xl px-[2rem] py-[1.563rem]">

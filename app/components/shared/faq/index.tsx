@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useRef, FC } from "react";
-import { faqData } from "@/app/utils/data";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
@@ -128,7 +127,7 @@ const FaqCard = ({
         </div>
       </div>
 
-      <hr className="h-[1px] max-w-[136px] bg-white" />
+      <hr className="h-[1px] max-w-[8.5rem] bg-white" />
     </>
   );
 };
@@ -142,7 +141,7 @@ const Faq: FC<FaqProps> = ({ faqs }) => {
   return (
     <section className="bg-black">
       <div className="container flex flex-col justify-between gap-8 py-16 md:flex-row md:gap-20 lg:pb-[7.625rem] lg:pt-[6.75rem] xl:gap-8">
-        <div className="max-w-[528px]">
+        <div className="max-w-[33rem]">
           <h2 className="text-3xl lg:text-5xl">
             Your Roadmap to{" "}
             <span className="bg-faq-gradient bg-clip-text leading-relaxed text-transparent">
@@ -156,7 +155,7 @@ const Faq: FC<FaqProps> = ({ faqs }) => {
           </p>
         </div>
 
-        <div className="w-full max-w-[740px]">
+        <div className="w-full max-w-[46.25rem]">
           {faqs?.map((faqItem, index) => (
             <FaqCard
               id={index}
