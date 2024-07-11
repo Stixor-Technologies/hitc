@@ -1,4 +1,4 @@
-import { Testimony } from "./types";
+import { Testimony, FaqItem } from "./types";
 
 const clientsData = [
   {
@@ -37,7 +37,7 @@ const clientsData = [
   },
 ];
 
-const TestimonialsData: Testimony[] = [
+const testimonialsData: Testimony[] = [
   {
     id: 1,
     imageUrl: "/assets/testimonials/phill-mantis.png",
@@ -75,4 +75,37 @@ const TestimonialsData: Testimony[] = [
   },
 ];
 
-export { clientsData, TestimonialsData };
+const faqData: FaqItem[] = [
+  {
+    id: 1,
+    question: "How flexible are HITC membership plans?",
+    answer:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+  },
+  {
+    id: 2,
+    question: "How flexible are HITC membership plans?",
+    answer:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+  },
+  {
+    id: 3,
+    question: "How flexible are HITC membership plans?",
+    answer:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+  },
+  {
+    id: 4,
+    question: "How flexible are HITC membership plans?",
+    answer:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+  },
+  {
+    id: 5,
+    question: "How flexible are HITC membership plans?",
+    answer:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+  },
+];
+
+export { clientsData, testimonialsData, faqData };

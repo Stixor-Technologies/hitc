@@ -6,4 +6,10 @@ interface Testimony {
   testimony: string;
 }
 
-export type { Testimony };
+interface FaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export type { Testimony, FaqItem };

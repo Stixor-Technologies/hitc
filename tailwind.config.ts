@@ -15,6 +15,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "faq-gradient":
+          "linear-gradient(11.37deg, #C944F7 -1.72%, #06DCC2 200.15%)",
       },
 
       colors: {
@@ -62,6 +64,8 @@ const config: Config = {
           },
           "@screen xl": {
             maxWidth: "100%",
+            paddingLeft: "4.375rem",
+            paddingRight: "4.375rem",
           },
           "@screen 2xl": {
             maxWidth: "1536px",
