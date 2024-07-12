@@ -1,4 +1,10 @@
 import { Testimony, FaqItem } from "./types";
+import CloudSolution from "@/public/assets/services/cloud-solutions.svg";
+import SoftwareDevelopment from "@/public/assets/services/software-development.svg";
+import DigitalMaketing from "@/public/assets/services/digital-marketing.svg";
+import HomeSolution from "@/public/assets/services/home-solutions.svg";
+import ManagedServices from "@/public/assets/services/managed-services.svg";
+import UIUX from "@/public/assets/services/ui-ux.svg";
 
 const clientsData = [
   {
@@ -108,4 +114,49 @@ const faqData: FaqItem[] = [
   },
 ];
 
-export { clientsData, testimonialsData, faqData };
+const servicesData = [
+  {
+    id: "cloud-solution",
+    icon: CloudSolution,
+    name: "Cloud Solution",
+    intro:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not",
+  },
+  {
+    id: "software-development",
+    icon: SoftwareDevelopment,
+    name: "Software Development",
+    intro:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not",
+  },
+  {
+    id: "managed-services",
+    icon: ManagedServices,
+    name: "Managed Services",
+    intro:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not",
+  },
+  {
+    id: "home-solution",
+    icon: HomeSolution,
+    name: "Smart Solutions",
+    intro:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not",
+  },
+  {
+    id: "digital-marketing",
+    icon: DigitalMaketing,
+    name: "Digital Marketing",
+    intro:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not",
+  },
+  {
+    id: "ui-ux",
+    icon: UIUX,
+    name: "UI/UX Design",
+    intro:
+      "Frequently asked questions ordered by popularity. Remember that if the visitor has not",
+  },
+];
+
+export { clientsData, testimonialsData, faqData, servicesData };

@@ -13,12 +13,12 @@ interface TestimonialsProps {
 }
 const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
   return (
-    <section className="bg-chinese-black relative z-10 pb-[4.25rem] pt-[3.438rem]">
+    <section className="relative z-10 bg-chinese-black pb-[4.25rem] pt-[3.438rem]">
       <div className="container">
         <h2 className="text-3xl lg:text-5xl">Testimonials</h2>
       </div>
       <div className="container mt-7 px-0 lg:mt-10">
-        <div className="relative mt-3 h-[20rem] w-full cursor-pointer overflow-visible md:mt-10 ">
+        <div className="relative mt-3 h-[12rem] w-full cursor-pointer overflow-visible md:mt-10 lg:h-[16rem] ">
           <div className="absolute left-0 list-none overflow-visible !px-4 sm:!px-8 lg:!px-[2.625rem]">
             <Swiper
               slidesPerView={"auto"}
@@ -34,10 +34,10 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
                 return (
                   <SwiperSlide
                     key={testimony?.id}
-                    className={`relative w-full max-w-[26.375]`}
+                    className={`relative w-full max-w-[26.375rem]`}
                   >
                     <ul className="relative flex flex-1">
-                      <li className="bg-smoke-black text-light-silver flex-1 rounded-2xl px-[2rem] py-[1.563rem]">
+                      <li className="flex-1 rounded-2xl bg-smoke-black px-[2rem] py-[1.563rem] text-light-silver">
                         <div className="flex items-center gap-5">
                           <div className="relative size-11 overflow-hidden rounded-full">
                             <Image

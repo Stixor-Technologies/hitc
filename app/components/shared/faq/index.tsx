@@ -123,7 +123,7 @@ const FaqCard = ({
         </div>
 
         <div ref={answerRef} className="h-0 w-[90%] overflow-hidden">
-          <p className=" text-sm leading-loose">{faqItem?.answer}</p>
+          <p className=" text-sm">{faqItem?.answer}</p>
         </div>
       </div>
 
@@ -144,11 +144,11 @@ const Faq: FC<FaqProps> = ({ faqs }) => {
         <div className="max-w-[33rem]">
           <h2 className="text-3xl lg:text-5xl">
             Your Roadmap to{" "}
-            <span className="bg-faq-gradient bg-clip-text leading-relaxed text-transparent">
+            <span className="bg-text-gradient-1 bg-clip-text leading-relaxed text-transparent">
               HITC Clarity
             </span>
           </h2>
-          <p className="mt-4 max-w-sm text-sm leading-loose md:mt-6">
+          <p className="mt-4 max-w-sm md:mt-6 lg:text-sm">
             Frequently asked questions ordered by popularity. Remember that if
             the visitor has not committed to the call to action, they may still
             have questions (doubts) that can be answered.
