@@ -1,10 +1,20 @@
 import { Testimony, FaqItem } from "./types";
+import Member1 from "@/public/assets/homepage/member-1.png";
+import Member2 from "@/public/assets/homepage/member-2.png";
 import CloudSolution from "@/public/assets/services/cloud-solutions.svg";
 import SoftwareDevelopment from "@/public/assets/services/software-development.svg";
 import DigitalMaketing from "@/public/assets/services/digital-marketing.svg";
 import HomeSolution from "@/public/assets/services/home-solutions.svg";
 import ManagedServices from "@/public/assets/services/managed-services.svg";
 import UIUX from "@/public/assets/services/ui-ux.svg";
+import { profile } from "console";
+
+const clientImages = [
+  "/assets/homepage/client-1.png",
+  "/assets/homepage/client-2.png",
+  "/assets/homepage/client-3.png",
+  "/assets/homepage/client-4.png",
+];
 
 const clientsData = [
   {
@@ -40,6 +50,25 @@ const clientsData = [
     name: "E-commerce Businesses",
     description:
       "We help businesses leverage technology to enhance customer experiences, optimize supply chain management, and drive online sales.",
+  },
+];
+
+const teamData = [
+  {
+    id: 1,
+    name: "Yusuf Fahad Bin Ibrahim Alhabeeb",
+    profileImage: Member1,
+    designation: "Founder",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. At augue est tellus elementum. Sagittis laoreet non aliquam eleifend diam. Nullam sed fames in non aliquet ligula lobortis in quis. Et congue mi mi ornare ac laoreet. Velit turpis eu est pretium senectus id purus. Etiam sed integer urna eu. Mauris sed pellentesque potenti metus vulputate. Aliquam arcu ornare.",
+  },
+  {
+    id: 2,
+    name: "Yusuf Fahad Bin Ibrahim Alhabeeb",
+    profileImage: Member2,
+    designation: "Founder",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. At augue est tellus elementum. Sagittis laoreet non aliquam eleifend diam. Nullam sed fames in non aliquet ligula lobortis in quis. Et congue mi mi ornare ac laoreet. Velit turpis eu est pretium senectus id purus. Etiam sed integer urna eu. Mauris sed pellentesque potenti metus vulputate. Aliquam arcu ornare.",
   },
 ];
 
@@ -159,4 +188,11 @@ const servicesData = [
   },
 ];
 
-export { clientsData, testimonialsData, faqData, servicesData };
+export {
+  clientImages,
+  clientsData,
+  teamData,
+  testimonialsData,
+  faqData,
+  servicesData,
+};
