@@ -23,7 +23,7 @@ const Clients = () => {
         </p>
       </div>
       <Marquee speed={120} autoFill loop={0} pauseOnHover>
-        <ul className="min-w-auto relative my-10 flex flex-1 overflow-hidden lg:mb-[7.313rem] lg:mt-[4.625rem]">
+        <ul className="min-w-auto relative mt-10 flex flex-1 overflow-hidden lg:mt-[4.625rem]">
           {clientsData?.map((data) => (
             <li
               key={data?.id}

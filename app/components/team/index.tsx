@@ -9,7 +9,7 @@ import { FreeMode } from "swiper/modules";
 
 const Team = () => {
   return (
-    <section className="pb-[200px] pt-[250px]">
+    <section className="py-20 lg:pb-[99px] lg:pt-[124px]">
       <div className="container">
         <h2 className="text-center text-3xl lg:text-5xl">
           Our{" "}

@@ -140,7 +140,7 @@ const Faq: FC<FaqProps> = ({ faqs }) => {
   };
   return (
     <section className="bg-black">
-      <div className="container flex flex-col justify-between gap-8 py-16 md:flex-row md:gap-20 lg:pb-[7.625rem] lg:pt-[6.75rem] xl:gap-8">
+      <div className="container flex flex-col justify-between gap-8 py-20 md:flex-row md:gap-20 lg:pb-[7.625rem] lg:pt-[6.75rem] xl:gap-8">
         <div className="max-w-[33rem]">
           <h2 className="text-3xl lg:text-5xl">
             Your Roadmap to{" "}

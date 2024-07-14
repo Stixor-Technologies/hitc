@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-black">
       <div className="container">
         <div className="flex flex-col justify-between gap-10 pt-16 lg:flex-row lg:gap-20">
-          <div className="flex w-full flex-col justify-between gap-10 xs:flex-row lg:order-1 lg:max-w-md xl:max-w-[36.875rem] xl:gap-0">
+          <div className="flex w-full flex-col justify-between gap-10 lg:order-1 lg:max-w-md xl:max-w-[36.875rem] xl:gap-0 xs:flex-row">
             <div className="flex-1">
               <h4 className="text-nowrap text-xs uppercase">Explore More</h4>
               <div className="mt-6 flex flex-col">
@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="font-sm max-w-[31.25rem]">
             <Image src={Logo} alt="hitc-logo" className="mb-8" />
 
-            <div>
+            <div className="text-sm">
               <span>Book a consultation with us!</span>
               <div className="my-6 flex flex-col gap-6 xs:flex-row">
                 <input

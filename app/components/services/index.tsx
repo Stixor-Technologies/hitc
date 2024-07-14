@@ -12,7 +12,7 @@ const Services = () => {
           alt="services-blob"
           className="absolute -left-1/2 -top-[8rem] max-h-[42.25rem] md:-left-[30rem]"
         />
-        <ul className="min-w-auto relative grid grid-cols-[repeat(auto-fit,_minmax(16.5rem,_1fr))] gap-x-6 gap-y-7 overflow-hidden lg:mb-[7.313rem]">
+        <ul className="min-w-auto relative grid grid-cols-[repeat(auto-fit,_minmax(16.5rem,_1fr))] gap-x-6 gap-y-7 overflow-hidden">
           <div className="col-span-full mb-4 flex flex-col justify-center gap-4 xl:col-start-3 xl:mb-0 xl:ml-10 xl:gap-6">
             <h2 className="max-w-sm text-3xl !leading-tight lg:text-5xl">
               Our{" "}
