@@ -3,9 +3,11 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
 import Header from "./components/header/header";
+import Image from "next/image";
+import Blob from "@/public/assets/blobs/services-blob.svg";
 
 const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-poppins",
 });
@@ -23,8 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <Image
+          src={Blob}
+          alt="services-blob"
+          className="fixed -left-1/2 -top-[20rem] max-h-[42.25rem] md:-left-[30rem]"
+        />
         <Header />
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

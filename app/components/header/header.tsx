@@ -7,6 +7,7 @@ import { sectionLinks } from "@/app/utils/utils";
 import { useMenuStore } from "@/app/store/menu-store";
 import Link from "next/link";
 import Hamburger from "./menu/hamburger";
+import Blob from "@/public/assets/blobs/client-blob.svg";
 
 const Header = () => {
   const activeSection = useMenuStore((state) => state.activeSection);
@@ -15,7 +16,7 @@ const Header = () => {
 
   return (
     <header ref={header} className={`fixed z-40 w-full`}>
-      <div className="container ">
+      <div className="container">
         <div className="flex items-center justify-between py-[1.75rem]">
           <div className="flex">
             <Link href={"/"}>

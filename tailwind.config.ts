@@ -19,13 +19,15 @@ const config: Config = {
           "linear-gradient(11.37deg, #C944F7 -1.72%, #06DCC2 200.15%)",
         "text-gradient-2":
           "linear-gradient(5.37deg, #C944F7 -80.72%, #06DCC2 130.15%)",
+        "text-gradient-3":
+          "linear-gradient(11.37deg, #C944F7 -4.72%, #06DCC2 120.15%)",
       },
 
       colors: {
         black: "#000000",
         blue: "#588FFF",
         ferozi: "#28C2CB",
-        pink: "#BF4CF4",
+        pink: "#C944F7",
         "light-black": "#1D1E1C",
         "dark-gray": "#474747",
         "dark-silver": "#838383",
@@ -38,11 +40,16 @@ const config: Config = {
       },
       screens: {
         xs: "440px",
+        mxl: "1360px",
         "min-aspect": { raw: "(min-aspect-ratio: 1/1)" },
+      },
+      boxShadow: {
+        "custom-white": "14px 17px 32.2px 0px rgba(192,192,192,0.25)",
       },
     },
   },
   plugins: [
+    require("@xpd/tailwind-3dtransforms"),
     function ({ addComponents }: any) {
       addComponents({
         ".container": {
