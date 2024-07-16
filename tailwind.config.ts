@@ -21,6 +21,7 @@ const config: Config = {
           "linear-gradient(5.37deg, #C944F7 -80.72%, #06DCC2 130.15%)",
         "text-gradient-3":
           "linear-gradient(11.37deg, #C944F7 -4.72%, #06DCC2 120.15%)",
+        swirls: " url('/assets/homepage/swirls-bg.svg') ",
       },
 
       colors: {
@@ -49,7 +50,6 @@ const config: Config = {
     },
   },
   plugins: [
-    require("@xpd/tailwind-3dtransforms"),
     function ({ addComponents }: any) {
       addComponents({
         ".container": {
