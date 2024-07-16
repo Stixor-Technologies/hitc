@@ -53,7 +53,6 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
     try {
       const emailTemplate = `<div>
         <p>New inquiry from: ${values?.name} - ${values?.email} </p>
-        <p>Contact Number: ${values?.phone} </p>
         <p>Message: ${values.message} </p>
         </div>`;
 
@@ -93,7 +92,7 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
   return (
     <div className="container w-full !max-w-[1316px]">
       <div
-        className={`flex flex-col gap-4 overflow-hidden rounded-[20px] shadow-md md:flex-row ${isDark ? "bg-[#1A1A1A]" : "bg-white"}`}
+        className={`flex flex-col gap-4 overflow-hidden rounded-[20px] shadow-md md:flex-row ${isDark ? "border-[0.5px] border-white bg-[#1A1A1A]" : "bg-white"}`}
       >
         <Formik
           initialValues={initialValues}
@@ -145,13 +144,13 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
                             <div key={fieldName}>
                               <label
                                 htmlFor={fieldName}
-                                className=" font-bold capitalize"
+                                className="font-bold capitalize"
                               >
                                 {fieldName}
                               </label>
                               <Field
                                 name={fieldName}
-                                className={`h-11 w-full rounded-[0.453rem] border border-light-silver px-4  placeholder-light-silver focus:outline-dark-gray ${isDark ? "bg-[#242424]" : "bg-white"}`}
+                                className={`h-11 w-full rounded-[0.453rem] border border-light-silver px-4 placeholder-light-silver focus:outline-dark-gray ${isDark ? "bg-[#242424]" : "bg-white"}`}
                                 placeholder={placeholder}
                               />
 
@@ -176,7 +175,9 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
                       type="submit"
                       text={"Send Message"}
                       variant="sm"
-                      styles={"max-w-[210px] mt-3.5 lg:mt-7"}
+                      styles={
+                        "sm:max-w-[210px] mt-3.5 lg:mt-7 hover:translate-x-0"
+                      }
                     />
                   </Form>
                 </div>
