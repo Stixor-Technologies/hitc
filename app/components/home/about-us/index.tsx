@@ -11,7 +11,10 @@ import { FreeMode } from "swiper/modules";
 
 const AboutUs = () => {
   return (
-    <section className="bg-swirls bg-cover bg-no-repeat py-20 lg:pb-[7.313rem] lg:pt-[8.125rem]">
+    <section
+      id="about"
+      className="bg-swirls bg-cover bg-no-repeat py-20 lg:pb-[7.313rem] lg:pt-[8.125rem]"
+    >
       <div className="container">
         <div className="mb-12 flex flex-col gap-6 md:flex-row lg:!gap-[3.75rem] xs:gap-8">
           <div
@@ -20,7 +23,7 @@ const AboutUs = () => {
             <div className="front min-w-[17.5rem] overflow-hidden rounded-2xl lg:!rounded-[2.063rem] xs:rounded-3xl">
               <Image src={About} width={554} alt="member-1" />
             </div>
-            <div className="back bg-text-gradient-3 flex items-center rounded-2xl px-7 py-7 lg:!rounded-[2.063rem] lg:py-14 xs:rounded-3xl">
+            <div className="back flex items-center rounded-2xl bg-text-gradient-3 px-7 py-7 lg:!rounded-[2.063rem] lg:py-14 xs:rounded-3xl">
               <div className="inner">
                 <h2 className="text-2xl font-extrabold !leading-tight sm:!text-5xl md:!text-3xl lg:!text-5xl xs:text-4xl">
                   Houghton International Technical College
@@ -32,11 +35,16 @@ const AboutUs = () => {
           <div className=" max-w-[36.188rem] self-center text-dark-gray">
             <h2 className=" text-3xl leading-none lg:text-5xl">Who we are?</h2>
             <p className="my-3.5 lg:my-6">
-              At HITC, we're your one-stop destination - whether you require
-              cutting-edge website design, bespoke software development, or
-              strategic digital marketing solutions.
+              At HITC, we&apos;re your one-stop destination - whether you
+              require cutting-edge website design, bespoke software development,
+              or strategic digital marketing solutions.
             </p>
-            <LinkButton as={"button"} variant="sm" text="Contact Us" />
+            <LinkButton
+              as={"button"}
+              variant="sm"
+              text="Contact Us"
+              styles={"hover:translate-x-0"}
+            />
           </div>
         </div>
 
@@ -63,7 +71,7 @@ const AboutUs = () => {
                     />
                   </div>
                 </div>
-                <div className="back bg-text-gradient-3 shadow-custom-white flex items-center rounded-[2.063rem] px-6 py-4 lg:px-9 lg:py-12">
+                <div className="back flex items-center rounded-[2.063rem] bg-text-gradient-3 px-6 py-4 shadow-custom-white lg:px-9 lg:py-12">
                   <div className="inner">
                     <p className="lg:text-lg">{data?.descrption}</p>
                   </div>

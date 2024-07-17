@@ -31,7 +31,7 @@ export default function RootLayout({
           className="fixed -left-1/2 -top-[20rem] max-h-[42.25rem] md:-left-[30rem]"
         />
         <Header />
-        <main className="overflow-x-hidden">{children}</main>
+        <main className=" relative z-10 overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

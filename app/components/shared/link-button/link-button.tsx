@@ -23,7 +23,7 @@ const LinkButton: FC<ActionProps> = ({ variant, styles, text, ...props }) => {
   const getSizeClass = () => {
     switch (variant) {
       case "sm":
-        return "max-w-[10.875rem] w-full h-[2.75rem]";
+        return "sm:max-w-[10.875rem] w-full h-[2.75rem]";
       case "md":
         return "sm:max-w-[16.938rem] w-full h-[2.813rem]";
       default:

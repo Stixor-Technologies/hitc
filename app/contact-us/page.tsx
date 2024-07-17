@@ -14,7 +14,12 @@ const Contact = () => {
             <p className="lg:text-xl">
               Get in touch with us to benefit from our dynamic expertise
             </p>
-            <LinkButton as={"button"} text="Book a Consultation" variant="md" />
+            <LinkButton
+              as={"button"}
+              text="Book a Consultation"
+              variant="md"
+              styles={"hover:translate-x-0"}
+            />
           </div>
         </div>
       </section>

@@ -21,6 +21,8 @@ const config: Config = {
           "linear-gradient(5.37deg, #C944F7 -80.72%, #06DCC2 130.15%)",
         "text-gradient-3":
           "linear-gradient(11.37deg, #C944F7 -4.72%, #06DCC2 120.15%)",
+        "gradient-4":
+          "linear-gradient(15.65deg, #C944F7 6.14%, #06DCC2 229.57%)",
         swirls: " url('/assets/homepage/swirls-bg.svg') ",
       },
 

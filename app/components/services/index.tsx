@@ -5,7 +5,7 @@ import Blob from "@/public/assets/blobs/services-blob.svg";
 
 const Services = () => {
   return (
-    <section>
+    <section id="services">
       <div className="container relative bg-[right_-8.5rem_top_-14rem] bg-no-repeat py-20 md:bg-[url('/assets/services/bg-services-home.svg')] lg:pb-[11.688rem] lg:pt-[7.5rem] ">
         <Image
           src={Blob}

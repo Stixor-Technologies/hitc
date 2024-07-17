@@ -4,11 +4,6 @@ import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 // import Spinner from "../spinner/spinner";
 import { MAP_KEY } from "@/app/utils/constant";
 
-interface Location {
-  lat: number;
-  lng: number;
-}
-
 interface IProps {
   fromContact?: boolean;
 }

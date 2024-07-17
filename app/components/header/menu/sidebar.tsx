@@ -5,7 +5,6 @@ import { useMenuStore } from "@/app/store/menu-store";
 import { sectionLinks } from "@/app/utils/utils";
 
 const Sidebar = () => {
-  const menuButtonRef = useRef<HTMLLIElement | null>(null);
   const sideBarMenu = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const activeSection = useMenuStore((state) => state.activeSection);
@@ -17,9 +16,7 @@ const Sidebar = () => {
     (event: MouseEvent) => {
       if (
         sideBarMenu.current &&
-        menuButtonRef.current &&
         !sideBarMenu.current.contains(event.target as Node) &&
-        !menuButtonRef.current?.contains(event.target as Node) &&
         isMenuOpen
       ) {
         setIsMenuOpen(false);
@@ -91,48 +88,29 @@ const Sidebar = () => {
     };
   }, [isMenuOpen]);
 
+  const scrollToSection = (targetSection: string) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: targetSection, offsetY: 93 },
+      ease: "power2",
+    });
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <div
         ref={sideBarMenu}
-        className="min-aspect:-mr-[40vw] min-aspect:w-[40vw] fixed right-0 top-0 z-40 -mr-[100vw]
-          h-screen w-screen bg-black will-change-auto"
+        className="fixed right-0 top-0 z-40 -mr-[100vw] h-screen w-screen
+          bg-black will-change-auto min-aspect:-mr-[40vw] min-aspect:w-[40vw]"
       >
         <div className="bg-indigo-blue absolute -z-10 h-full w-full" />
 
         <div
-          className=" min-aspect:mx-0 min-aspect:w-full min-aspect:justify-center min-aspect:pt-[6vw] mx-auto h-full 
-          w-full flex-col justify-center p-4 pb-4 pt-[2.313rem]"
+          className=" mx-auto h-full w-full flex-col justify-center p-4 
+          pb-4 pt-[2.313rem] min-aspect:mx-0 min-aspect:w-full min-aspect:justify-center min-aspect:pt-[6vw]"
         >
-          {/* <div className="flex justify-between">
-            <button
-              onClick={() => {
-                setIsMenuOpen(!isMenuOpen);
-                document.body.classList.remove("!overflow-hidden");
-              }}
-            >
-              <Image
-                src={CloseIcon}
-                alt=""
-                className="md:hide-custom-cursor md:no-custom-cursor md:hidden"
-              />
-            </button>
-          </div> */}
-
-          {/* <ul className="min-aspect:mt-[4vw] min-aspect:space-y-[1.5vw] mt-[12.6vw] space-y-[5.6vw] text-xl md:text-left">
-            {sectionLinks?.map((item) => (
-              <li
-                key={item?.id}
-                className={`after:transition-width relative text-white after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-white after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full lg:text-xl ${
-                  activeSection === item?.id && "after:w-full"
-                }`}
-              >
-                <button onClick={() => {}}>{item?.title}</button>
-              </li>
-            ))}
-          </ul> */}
-
-          <ul className="min-aspect:space-y-[3vw] min-aspect:text-[3vw] mt-[12.6vw] space-y-[7vw] px-8 text-[7vw] md:text-left">
+          <ul className="mt-[12.6vw] space-y-[7vw] px-8 text-[7vw] md:text-left min-aspect:space-y-[3vw] min-aspect:text-[3vw]">
             {sectionLinks.map((item, index) => (
               <li
                 className={`after:transition-width relative w-max text-white after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-white after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full ${
@@ -140,7 +118,13 @@ const Sidebar = () => {
                 }`}
                 key={index}
               >
-                <button onClick={() => {}}>{item?.title}</button>
+                <button
+                  onClick={() => {
+                    scrollToSection(item?.id);
+                  }}
+                >
+                  {item?.title}
+                </button>
               </li>
             ))}
           </ul>
