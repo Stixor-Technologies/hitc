@@ -1,29 +1,18 @@
-import Image from "next/image";
-import Link from "next/link";
 import Testimonials from "./components/shared/testimonials";
 import Clients from "./components/shared/clients";
 import Team from "./components/team";
 import { testimonialsData, faqData } from "./utils/data";
 import Faq from "./components/shared/faq";
 import Services from "./components/services";
-import Blob from "@/public/assets/blobs/services-blob.svg";
-import { clientImages } from "./utils/data";
-import Graph from "@/public/assets/homepage/graph.svg";
-import Rating from "@/public/assets/homepage/rating.png";
-import Fiction from "@/public/assets/homepage/fiction.png";
-import Table from "@/public/assets/homepage/table.png";
-import Arrow from "@/public/assets/homepage/arrow-icon.svg";
-import Instagram from "@/public/assets/homepage/instagram.svg";
-import Linkedin from "@/public/assets/homepage/linkedin.svg";
-import Facebook from "@/public/assets/homepage/facebook.svg";
-
-import LinkButton from "./components/shared/link-button/link-button";
+import HeroHome from "./components/home/hero";
+import AboutUs from "./components/home/about-us";
+import ContactForm from "./components/shared/contact-form";
 
 export default function Home() {
   return (
     <>
       {/* <section className="pt-[189px]"> */}
-      <section className="pt-[189px]">
+      {/* <section className="pt-[189px]">
         <div className="container flex flex-col justify-center gap-14 md:flex-row md:gap-10 xl:gap-[109px]">
           <div className="mt-4 md:max-w-[340px] lg:mt-8 lg:max-w-[450px] xl:max-w-[519px]">
             <h2 className="text-4xl leading-tight lg:text-5xl xl:text-[64px]">
@@ -126,14 +115,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <HeroHome />
+      <AboutUs />
+      <Services />
+      <Clients />
+      <Team />
+      <Testimonials testimonials={testimonialsData} />
+      <Faq faqs={faqData} />
 
-      {/* <Services />
-        <Clients />
-        <Team />
-        <Testimonials testimonials={testimonialsData} />
-        <Faq faqs={faqData} /> */}
-      {/* </section> */}
+      <section className="bg-swirls bg-cover bg-no-repeat py-20 lg:py-[7.063rem]">
+        <ContactForm />
+      </section>
     </>
   );
 }
