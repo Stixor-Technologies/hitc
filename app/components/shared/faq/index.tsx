@@ -141,14 +141,14 @@ const Faq: FC<FaqProps> = ({ faqs }) => {
   return (
     <section className="bg-black">
       <div className="container flex flex-col justify-between gap-8 py-20 md:flex-row md:gap-20 lg:pb-[7.625rem] lg:pt-[6.75rem] xl:gap-8">
-        <div className="max-w-[33rem]">
-          <h2 className="text-3xl lg:text-5xl">
+        <div className="md:max-w-[33rem]">
+          <h2 className="text-3xl lg:text-5xl xl:w-[80%]">
             Your Roadmap to{" "}
-            <span className="bg-text-gradient-1 bg-clip-text leading-relaxed text-transparent">
+            <span className="bg-text-gradient-1 bg-clip-text text-transparent">
               HITC Clarity
             </span>
           </h2>
-          <p className="mt-4 max-w-sm md:mt-6 lg:text-sm">
+          <p className="mt-4 md:mt-6 md:max-w-sm lg:text-sm">
             Frequently asked questions ordered by popularity. Remember that if
             the visitor has not committed to the call to action, they may still
             have questions (doubts) that can be answered.
