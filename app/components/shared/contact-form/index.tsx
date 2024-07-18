@@ -79,7 +79,7 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
           formikHelpers.resetForm();
         }, 1000);
       } else {
-        toast.error("Email has been sent", {
+        toast.error("Failed to send email", {
           position: "top-right",
         });
       }
