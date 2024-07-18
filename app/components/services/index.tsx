@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { servicesData } from "@/app/utils/data";
+import { servicesList } from "@/app/utils/data";
 import Blob from "@/public/assets/blobs/services-blob.svg";
 
 const Services = () => {
@@ -29,7 +29,7 @@ const Services = () => {
               rhoncus tincidunt.
             </p>
           </div>
-          {servicesData?.map((service, index) => (
+          {servicesList?.map((service, index) => (
             <li
               key={service?.id}
               className={`group w-full cursor-pointer overflow-hidden rounded-2xl border bg-dark-silver/20  px-8 py-[1.563rem] backdrop-blur-sm ${index === 0 && "xl:col-start-1 xl:row-start-1"} ${index === 1 && "xl:col-start-2 xl:row-start-1"}`}

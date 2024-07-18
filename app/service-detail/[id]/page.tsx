@@ -31,8 +31,6 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
     if (service) setService(service);
   }, []);
 
-  console.log("service", service);
-
   return (
     <>
       {loading ? (
