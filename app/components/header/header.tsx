@@ -110,10 +110,10 @@ const Header = () => {
 
             <Link
               href={"/contact-us"}
-              className="relative hidden w-[174px] text-white md:block"
+              className="relative hidden w-[10.875rem] text-white md:block"
             >
-              <div className="from-2% bg-gradient-4 absolute -inset-[1px] overflow-hidden rounded-lg md:rounded-[10px]"></div>
-              <div className="relative flex h-12 w-full items-center justify-center overflow-hidden rounded-lg bg-dark-gray [text-shadow:_0rem_0rem_0.688rem_rgb(255_255_255_/57%)] md:rounded-[10px] lg:text-xl  ">
+              <div className="from-2% bg-gradient-4 absolute -inset-[1px] overflow-hidden rounded-lg md:rounded-[0.625rem]"></div>
+              <div className="relative flex h-12 w-full items-center justify-center overflow-hidden rounded-lg bg-dark-gray [text-shadow:_0rem_0rem_0.688rem_rgb(255_255_255_/57%)] md:rounded-[0.625rem] lg:text-xl  ">
                 Contact Us
               </div>
             </Link>

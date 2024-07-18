@@ -91,9 +91,9 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
   };
 
   return (
-    <div className="container w-full !max-w-[1316px]">
+    <div className="container w-full !max-w-[82.25rem]">
       <div
-        className={`flex flex-col gap-4 overflow-hidden rounded-[20px] shadow-md md:flex-row ${isDark ? "border-[0.5px] border-white bg-[#1A1A1A]" : "bg-white"}`}
+        className={`flex flex-col gap-4 overflow-hidden rounded-[1.25rem] shadow-md md:flex-row ${isDark ? "border-[0.5px] border-white bg-[#1A1A1A]" : "bg-white"}`}
       >
         <Formik
           initialValues={initialValues}
@@ -103,10 +103,10 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
           {({ errors, touched }) => (
             <>
               <div
-                className={`px-4 py-7 sm:px-7 md:w-[50%] md:px-10 lg:px-16 lg:py-12 xl:px-[85px] ${isDark ? "text-white" : "text-dark-gray"}`}
+                className={`px-4 py-7 sm:px-7 md:w-[50%] md:px-10 lg:px-16 lg:py-12 xl:px-[5.313rem] ${isDark ? "text-white" : "text-dark-gray"}`}
               >
                 <div className=" ">
-                  <h4 className="text-3xl md:text-4xl lg:text-[53px] lg:leading-tight ">
+                  <h4 className="text-3xl md:text-4xl lg:text-[3.313rem] lg:leading-tight ">
                     Contact Us
                   </h4>
 
@@ -178,7 +178,7 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
                       text={"Send Message"}
                       variant="sm"
                       styles={
-                        "sm:max-w-[210px] mt-3.5 lg:mt-7 hover:translate-x-0"
+                        "sm:max-w-[13.125rem] mt-3.5 lg:mt-7 hover:translate-x-0"
                       }
                     />
                   </Form>

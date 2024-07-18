@@ -10,7 +10,7 @@ import TeamBlob from "@/public/assets/blobs/team-blob.svg";
 
 const Team = () => {
   return (
-    <section className="relative py-20 lg:pb-[99px] lg:pt-[124px]">
+    <section className="relative py-20 lg:pb-[6.188rem] lg:pt-[7.75rem]">
       <Image
         src={TeamBlob}
         alt="team-blob"
@@ -38,15 +38,15 @@ const Team = () => {
               spaceBetween: 40,
             },
           }}
-          className="team-swiper mx-auto mt-10 max-w-2xl !overflow-visible lg:mt-[6.188rem] lg:max-w-[892px] "
+          className="team-swiper mx-auto mt-10 max-w-2xl !overflow-visible lg:mt-[6.188rem] lg:max-w-[55.75rem] "
         >
           {teamData?.map((teamMember, index) => (
             <SwiperSlide
               key={teamMember?.id}
-              className="!w-[330px] !min-w-[330px] !max-w-[406px] lg:!w-[25.375rem] lg:!min-w-[25.375rem]"
+              className="!w-[20.625rem] !min-w-[20.625rem] !max-w-[25.375rem] lg:!w-[25.375rem] lg:!min-w-[25.375rem]"
             >
               <div
-                className={`content rounded-[1.688rem] ${index === 1 && "md:mt-[264px]"}`}
+                className={`content rounded-[1.688rem] ${index === 1 && "md:mt-[16.5rem]"}`}
               >
                 <div className="front rounded-[1.688rem] shadow-custom-white">
                   <Image

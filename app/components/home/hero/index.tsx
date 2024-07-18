@@ -29,10 +29,10 @@ const HeroHome = () => {
   });
 
   return (
-    <section className="pb-20 pt-[189px]" id="home" ref={ref}>
-      <div className="container flex flex-col justify-between gap-14 md:flex-row md:gap-10 xl:gap-[109px]">
-        <div className="mt-4 md:max-w-[340px] lg:mt-8 lg:max-w-[450px] xl:max-w-[519px]">
-          <h2 className="text-4xl !leading-tight lg:text-5xl xl:text-[64px]">
+    <section className="pb-20 pt-[11.813rem]" id="home" ref={ref}>
+      <div className="container flex flex-col justify-between gap-14 md:flex-row md:gap-10 xl:gap-[6.813rem]">
+        <div className="mt-4 md:max-w-[21.25rem] lg:mt-8 lg:max-w-[28.125rem] xl:max-w-[32.438rem]">
+          <h2 className="text-4xl !leading-tight lg:text-5xl xl:text-[4rem]">
             Building{" "}
             <span className="bg-text-gradient-2 bg-clip-text text-transparent">
               Digital
@@ -88,14 +88,14 @@ const HeroHome = () => {
           </div>
         </div>
 
-        <div className=" inline-grid  w-full max-w-[643px] grid-cols-[minmax(130.461px,291px)_minmax(27.35px,61.0781px)_minmax(130.461px,291px)] grid-rows-[22vw,auto] sm:grid-rows-[minmax(11vw,158px)_minmax(19.2vw,276px)_minmax(11vw,158px)] md:sm:grid-rows-[minmax(11vw,158px)_auto_minmax(11vw,118px)] mxl:sm:grid-rows-[minmax(11vw,158px)_auto]">
+        <div className=" inline-grid  w-full max-w-[40.188rem] grid-cols-[minmax(8.154rem,18.188rem)_minmax(1.709rem,3.817rem)_minmax(8.154rem,18.188rem)] grid-rows-[22vw,auto] sm:grid-rows-[minmax(11vw,9.875rem)_minmax(19.2vw,17.25rem)_minmax(11vw,9.875rem)] md:sm:grid-rows-[minmax(11vw,158px)_auto_minmax(11vw,7.375rem)] mxl:sm:grid-rows-[minmax(11vw,9.875rem)_auto]">
           <Image
             src={Fiction}
             alt="homepage-fiction"
             className="col-span-2 col-start-1 row-start-1"
           />
 
-          <div className=" col-start-3 ml-10 hidden size-24 items-center justify-center self-center rounded-full border-4 border-white bg-gradient-to-t from-pink to-ferozi sm:flex md:size-20 lg:size-24 xl:size-[123px]">
+          <div className=" col-start-3 ml-10 hidden size-24 items-center justify-center self-center rounded-full border-4 border-white bg-gradient-to-t from-pink to-ferozi sm:flex md:size-20 lg:size-24 xl:size-[7.688rem]">
             <Image src={Graph} alt="graph" className="w-12 md:w-10 xl:w-auto" />
           </div>
 
@@ -104,7 +104,7 @@ const HeroHome = () => {
             alt="homepage-table"
             className="col-span-full col-start-2 row-start-2"
           />
-          <div className="col-span-full row-start-4 mt-4 hidden min-w-[259px] self-start rounded-2xl bg-white p-3 sm:col-span-1 sm:row-start-3 sm:block sm:max-w-[259px]  md:col-span-full md:row-start-3 md:mt-3 md:max-w-full md:self-start lg:rounded-3xl lg:px-4 lg:py-[18px] mxl:col-span-1 mxl:row-start-2 mxl:max-w-[259px] mxl:self-end">
+          <div className="col-span-full row-start-4 mt-4 hidden min-w-[16.188rem] self-start rounded-2xl bg-white p-3 sm:col-span-1 sm:row-start-3 sm:block sm:max-w-[16.188rem]  md:col-span-full md:row-start-3 md:mt-3 md:max-w-full md:self-start lg:rounded-3xl lg:px-4 lg:py-[1.125rem] mxl:col-span-1 mxl:row-start-2 mxl:max-w-[16.188re,] mxl:self-end">
             <h4 className="font-semibold text-black">Our happy Clients</h4>
             <Image src={Rating} width={84} alt="rating" />
             <div className="flex items-center justify-between gap-2.5 sm:justify-start">
@@ -132,7 +132,7 @@ const HeroHome = () => {
           </div>
         </div>
 
-        <div className="mt-4 min-w-[259px] rounded-2xl bg-white p-3 sm:hidden sm:max-w-[259px]  md:mt-0 md:max-w-full lg:rounded-3xl lg:px-4 lg:py-[18px] mxl:max-w-[259px]">
+        <div className="mt-4 min-w-[16.188rem] rounded-2xl bg-white p-3 sm:hidden sm:max-w-[16.188rem]  md:mt-0 md:max-w-full lg:rounded-3xl lg:px-4 lg:py-[1.125rem] mxl:max-w-[16.188rem]">
           <h4 className="font-semibold text-black">Our happy Clients</h4>
           <Image src={Rating} width={84} alt="rating" />
           <div className="flex items-center justify-between gap-2.5 sm:justify-start">

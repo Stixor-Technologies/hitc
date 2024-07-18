@@ -17,10 +17,10 @@ const Contact = () => {
   });
   return (
     <>
-      <section className="bg-cover bg-no-repeat py-[198px] md:bg-[url('/assets/contact-bg.svg')] lg:pb-[305px] lg:pt-[221px]">
+      <section className="bg-cover bg-no-repeat py-[12.375rem] md:bg-[url('/assets/contact-bg.svg')] lg:pb-[19.063rem] lg:pt-[13.813rem]">
         <div className="container">
           <div className="flex flex-col items-center gap-5 text-center lg:gap-8">
-            <h2 className="text-4xl !leading-none lg:text-[64px] ">
+            <h2 className="text-4xl !leading-none lg:text-[4rem] ">
               Contact Us
             </h2>
             <p className="lg:text-xl">
@@ -40,7 +40,7 @@ const Contact = () => {
       </section>
       <section
         id="contact"
-        className="-mt-[118px] pb-10 lg:-mt-[126px] lg:pb-[105px]"
+        className="-mt-[7.375rem] pb-10 lg:-mt-[7.875rem] lg:pb-[6.563rem]"
       >
         <ContactForm isDark />
       </section>
