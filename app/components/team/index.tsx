@@ -6,10 +6,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FreeMode } from "swiper/modules";
+import TeamBlob from "@/public/assets/blobs/team-blob.svg";
 
 const Team = () => {
   return (
-    <section className="py-20 lg:pb-[99px] lg:pt-[124px]">
+    <section className="relative py-20 lg:pb-[99px] lg:pt-[124px]">
+      <Image
+        src={TeamBlob}
+        alt="team-blob"
+        className="absolute -left-[30rem] top-1/2 max-h-[52.25rem] -translate-y-1/2 "
+      />
       <div className="container">
         <h2 className="text-center text-3xl lg:text-5xl">
           Our{" "}
@@ -42,14 +48,14 @@ const Team = () => {
               <div
                 className={`content rounded-[1.688rem] ${index === 1 && "md:mt-[264px]"}`}
               >
-                <div className="front shadow-custom-white rounded-[1.688rem]">
+                <div className="front rounded-[1.688rem] shadow-custom-white">
                   <Image
                     src={teamMember?.profileImage}
                     width={406}
                     alt="member-1"
                   />
                 </div>
-                <div className="back bg-text-gradient-3 shadow-custom-white rounded-[1.688rem] px-7 pt-7 lg:pt-14">
+                <div className="back rounded-[1.688rem] bg-text-gradient-3 px-7 pt-7 shadow-custom-white lg:pt-14">
                   <div className="inner">
                     <h2 className="text-2xl font-extrabold lg:text-[2rem] lg:leading-8">
                       {teamMember?.name}

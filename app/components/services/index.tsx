@@ -9,13 +9,13 @@ const Services = () => {
   const { ref } = useSectionInView("#services");
 
   return (
-    <section id="services" ref={ref}>
-      <div className="container relative bg-[right_-8.5rem_top_-14rem] bg-no-repeat py-20 md:bg-[url('/assets/services/bg-services-home.svg')] lg:pb-[11.688rem] lg:pt-[7.5rem] ">
-        <Image
-          src={Blob}
-          alt="services-blob"
-          className="absolute -left-1/2 -top-[8rem] max-h-[42.25rem] md:-left-[30rem]"
-        />
+    <section id="services" ref={ref} className="relative overflow-y-hidden">
+      <Image
+        src={Blob}
+        alt="services-blob"
+        className="absolute -left-1/2 -top-[14rem] max-h-[42.25rem] md:-left-[30rem]"
+      />
+      <div className="container  bg-[right_-8.5rem_top_-14rem] bg-no-repeat py-20 md:bg-[url('/assets/services/bg-services-home.svg')] lg:pb-[11.688rem] lg:pt-[7.5rem] ">
         <ul className="min-w-auto relative grid grid-cols-[repeat(auto-fit,_minmax(16.5rem,_1fr))] gap-x-6 gap-y-7 overflow-hidden">
           <div className="col-span-full mb-4 flex flex-col justify-center gap-4 xl:col-start-3 xl:mb-0 xl:ml-10 xl:gap-6">
             <h2 className="max-w-sm text-3xl !leading-tight lg:text-5xl">
