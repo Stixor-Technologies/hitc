@@ -36,7 +36,6 @@ const LinkButton: FC<ActionProps> = ({ variant, styles, text, ...props }) => {
 
   if (props.as === "link") {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-
     const { as, ...rest } = props;
     return (
       <Link className={`${allClassNames} inline-flex`} {...rest}>
@@ -46,7 +45,6 @@ const LinkButton: FC<ActionProps> = ({ variant, styles, text, ...props }) => {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-
   const { as, loading, ...rest } = props;
   return (
     <button className={`${allClassNames} relative flex `} {...rest}>
