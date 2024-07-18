@@ -1,10 +1,29 @@
+"use client";
 import React from "react";
 import Logo from "@/public/assets/logo.svg";
 import Image from "next/image";
 import { sectionLinks, socialLink, connectionLinks } from "@/app/utils/utils";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import gsap from "gsap";
+import { ScrollTrigger, ScrollToPlugin } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 const Footer = () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  const router = useRouter();
+  const path = usePathname();
+  const { contextSafe } = useGSAP();
+
+  const scrollToSection = contextSafe((targetSection: string) => {
+    if (path !== "/") router.push("/");
+    gsap.to(window, {
+      duration: 1,
+      delay: 0.5,
+      scrollTo: { y: targetSection, offsetY: 93 },
+      ease: "power2",
+    });
+  });
   return (
     <footer className="bg-black">
       <div className="container">
@@ -12,17 +31,28 @@ const Footer = () => {
           <div className="flex w-full flex-col justify-between gap-10 lg:order-1 lg:max-w-md xl:max-w-[36.875rem] xl:gap-0 xs:flex-row">
             <div className="flex-1">
               <h4 className="text-nowrap text-xs uppercase">Explore More</h4>
-              <div className="mt-6 flex flex-col">
-                {sectionLinks?.map((link, index) => (
-                  <Link
+              <ul className="mt-6 flex flex-col">
+                {sectionLinks?.slice(0, -1)?.map((link, index) => (
+                  <li
                     key={index}
-                    href={link?.path}
                     className="after:transition-width relative mb-5 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
                   >
-                    {link.title}
-                  </Link>
+                    <button
+                      onClick={() => {
+                        scrollToSection(link?.id);
+                      }}
+                    >
+                      {link.title}
+                    </button>
+                  </li>
                 ))}
-              </div>
+              </ul>
+              <Link
+                href={"/contact-us"}
+                className="after:transition-width relative mb-5 block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
+              >
+                Contact Us
+              </Link>
             </div>
 
             <div className="flex-1">
@@ -46,6 +76,7 @@ const Footer = () => {
                 {socialLink?.map((link, index) => (
                   <Link
                     key={index}
+                    target="blank"
                     href={link?.path}
                     className="after:transition-width relative mb-5 inline-block w-max text-sm after:absolute after:-bottom-1 after:left-0 after:h-[0.081rem] after:w-0 after:bg-white after:duration-500 after:ease-in-out after:content-[''] hover:after:w-full"
                   >

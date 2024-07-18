@@ -9,21 +9,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { FreeMode } from "swiper/modules";
 import useSectionInView from "@/app/utils/useSectionInView";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import { useScrollToSection } from "@/app/utils/scroll";
 
 const AboutUs = () => {
   const { ref } = useSectionInView("#about");
-
-  const { contextSafe } = useGSAP();
-
-  const scrollToSection = contextSafe((targetSection: string) => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: { y: targetSection, offsetY: 93 },
-      ease: "power2",
-    });
-  });
+  const { scrollToSection } = useScrollToSection();
 
   return (
     <section

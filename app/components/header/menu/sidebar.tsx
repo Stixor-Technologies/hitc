@@ -98,7 +98,7 @@ const Sidebar = () => {
 
     gsap.to(window, {
       duration: 1,
-      delay: 0.5,
+      delay: path !== "/" ? 0.5 : 0,
       scrollTo: { y: targetSection, offsetY: 78 },
       ease: "power2",
     });

@@ -14,8 +14,7 @@ import Testimonials from "@/app/components/shared/testimonials";
 import Faq from "@/app/components/shared/faq";
 import ContactForm from "@/app/components/shared/contact-form";
 import Spinner from "@/app/components/shared/spinner/spinner";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import { useScrollToSection } from "@/app/utils/scroll";
 interface ServiceDetailParams {
   params: {
     id: string;
@@ -25,16 +24,7 @@ interface ServiceDetailParams {
 const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
   const [service, setService] = useState<Service | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-
-  const { contextSafe } = useGSAP();
-
-  const scrollToSection = contextSafe((targetSection: string) => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: { y: targetSection, offsetY: 93 },
-      ease: "power2",
-    });
-  });
+  const { scrollToSection } = useScrollToSection();
 
   useEffect(() => {
     setLoading(true);

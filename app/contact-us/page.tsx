@@ -2,19 +2,11 @@
 import React from "react";
 import LinkButton from "../components/shared/link-button/link-button";
 import ContactForm from "../components/shared/contact-form";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import { useScrollToSection } from "../utils/scroll";
 
 const Contact = () => {
-  const { contextSafe } = useGSAP();
+  const { scrollToSection } = useScrollToSection();
 
-  const scrollToSection = contextSafe((targetSection: string) => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: { y: targetSection, offsetY: 117 },
-      ease: "power2",
-    });
-  });
   return (
     <>
       <section className="bg-cover bg-no-repeat py-[12.375rem] md:bg-[url('/assets/contact-bg.svg')] lg:pb-[19.063rem] lg:pt-[13.813rem]">

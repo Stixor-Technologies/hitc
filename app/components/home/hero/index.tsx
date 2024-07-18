@@ -13,20 +13,11 @@ import Linkedin from "@/public/assets/homepage/linkedin.svg";
 import Facebook from "@/public/assets/homepage/facebook.svg";
 import LinkButton from "../../shared/link-button/link-button";
 import useSectionInView from "@/app/utils/useSectionInView";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import { useScrollToSection } from "@/app/utils/scroll";
 
 const HeroHome = () => {
   const { ref } = useSectionInView("#home");
-
-  const { contextSafe } = useGSAP();
-  const scrollToSection = contextSafe((targetSection: string) => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: { y: targetSection, offsetY: 93 },
-      ease: "power2",
-    });
-  });
+  const { scrollToSection } = useScrollToSection();
 
   return (
     <section className="pb-20 pt-[11.813rem]" id="home" ref={ref}>
