@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import Header from "./components/header/header";
 import Image from "next/image";
 import Blob from "@/public/assets/blobs/services-blob.svg";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -31,8 +32,9 @@ export default function RootLayout({
           className="fixed -left-1/2 -top-[20rem] max-h-[42.25rem] md:-left-[30rem]"
         />
         <Header />
-        <main className=" relative z-10 overflow-x-hidden">{children}</main>
+        <main className={`relative z-10 overflow-x-hidden`}>{children}</main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

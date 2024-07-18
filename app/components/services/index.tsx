@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { servicesList } from "@/app/utils/data";
 import Blob from "@/public/assets/blobs/services-blob.svg";
+import useSectionInView from "@/app/utils/useSectionInView";
 
 const Services = () => {
+  const { ref } = useSectionInView("#services");
+
   return (
-    <section id="services">
+    <section id="services" ref={ref}>
       <div className="container relative bg-[right_-8.5rem_top_-14rem] bg-no-repeat py-20 md:bg-[url('/assets/services/bg-services-home.svg')] lg:pb-[11.688rem] lg:pt-[7.5rem] ">
         <Image
           src={Blob}

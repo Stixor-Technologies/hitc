@@ -3,8 +3,13 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useMenuStore } from "@/app/store/menu-store";
 import { sectionLinks } from "@/app/utils/utils";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Sidebar = () => {
+  const path = usePathname();
+  const router = useRouter();
+
   const sideBarMenu = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const activeSection = useMenuStore((state) => state.activeSection);
@@ -89,9 +94,12 @@ const Sidebar = () => {
   }, [isMenuOpen]);
 
   const scrollToSection = (targetSection: string) => {
+    if (path !== "/") router.push("/");
+
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: targetSection, offsetY: 93 },
+      delay: 0.5,
+      scrollTo: { y: targetSection, offsetY: 78 },
       ease: "power2",
     });
     setIsMenuOpen(false);
@@ -111,10 +119,10 @@ const Sidebar = () => {
           pb-4 pt-[2.313rem] min-aspect:mx-0 min-aspect:w-full min-aspect:justify-center min-aspect:pt-[6vw]"
         >
           <ul className="mt-[12.6vw] space-y-[7vw] px-8 text-[7vw] md:text-left min-aspect:space-y-[3vw] min-aspect:text-[3vw]">
-            {sectionLinks.map((item, index) => (
+            {sectionLinks?.slice(0, -1)?.map((item, index) => (
               <li
                 className={`after:transition-width relative w-max text-white after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-white after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full ${
-                  activeSection === item?.id && "after:w-full"
+                  activeSection === item?.id && path === "/" && "after:w-full"
                 }`}
                 key={index}
               >
@@ -127,6 +135,17 @@ const Sidebar = () => {
                 </button>
               </li>
             ))}
+            <Link
+              href={"/contact-us"}
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+              className={`after:transition-width relative mt-[7vw] inline-block w-max text-white after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-white after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full min-aspect:mt-[3vw] ${
+                path === "/contact-us" && "after:w-full"
+              }`}
+            >
+              Contact Us
+            </Link>
           </ul>
         </div>
       </div>

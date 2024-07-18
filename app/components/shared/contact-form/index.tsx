@@ -69,6 +69,7 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
         }),
       });
       const data = await res.json();
+      console.log("data", data);
       if (data === 202) {
         toast.success("Email has been sent", {
           position: "top-right",
@@ -172,6 +173,7 @@ const ContactForm: FC<ContactFormProps> = ({ isDark }) => {
                     <LinkButton
                       as={"button"}
                       loading={loading}
+                      disabled={loading}
                       type="submit"
                       text={"Send Message"}
                       variant="sm"

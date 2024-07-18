@@ -8,10 +8,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FreeMode } from "swiper/modules";
+import useSectionInView from "@/app/utils/useSectionInView";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 const AboutUs = () => {
+  const { ref } = useSectionInView("#about");
+
+  const { contextSafe } = useGSAP();
+
+  const scrollToSection = contextSafe((targetSection: string) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: targetSection, offsetY: 93 },
+      ease: "power2",
+    });
+  });
+
   return (
     <section
+      ref={ref}
       id="about"
       className="bg-swirls bg-cover bg-no-repeat py-20 lg:pb-[7.313rem] lg:pt-[8.125rem]"
     >
@@ -44,6 +60,9 @@ const AboutUs = () => {
               variant="sm"
               text="Contact Us"
               styles={"hover:translate-x-0"}
+              onClick={() => {
+                scrollToSection("#contact");
+              }}
             />
           </div>
         </div>

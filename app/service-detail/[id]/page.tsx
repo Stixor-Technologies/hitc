@@ -14,6 +14,8 @@ import Testimonials from "@/app/components/shared/testimonials";
 import Faq from "@/app/components/shared/faq";
 import ContactForm from "@/app/components/shared/contact-form";
 import Spinner from "@/app/components/shared/spinner/spinner";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 interface ServiceDetailParams {
   params: {
     id: string;
@@ -23,6 +25,16 @@ interface ServiceDetailParams {
 const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
   const [service, setService] = useState<Service | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const { contextSafe } = useGSAP();
+
+  const scrollToSection = contextSafe((targetSection: string) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: targetSection, offsetY: 93 },
+      ease: "power2",
+    });
+  });
 
   useEffect(() => {
     setLoading(true);
@@ -59,6 +71,9 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
                   text="Book a Consultation"
                   variant="md"
                   styles={"hover:translate-x-0"}
+                  onClick={() => {
+                    scrollToSection("#contact");
+                  }}
                 />
               </div>
             </div>
@@ -89,9 +104,6 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
                           <li>
                             <Image src={technology} alt="technology" />
                           </li>
-                          {/* <li key={index}>
-                        <span>{`Technology ${technology}`}</span>
-                      </li> */}
                         </SwiperSlide>
                       );
                     })}
@@ -138,7 +150,10 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
           {service?.faq && <Faq faqs={service?.faq} />}
 
           {/* contact form */}
-          <section className="bg-swirls bg-cover bg-no-repeat py-20 lg:py-[7.063rem]">
+          <section
+            id="contact"
+            className="bg-swirls bg-cover bg-no-repeat py-20 lg:py-[7.063rem]"
+          >
             <ContactForm />
           </section>
         </>

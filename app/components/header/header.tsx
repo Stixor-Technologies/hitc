@@ -12,9 +12,9 @@ import { ScrollTrigger, ScrollToPlugin } from "gsap/all";
 import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   const router = useRouter();
   const path = usePathname();
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   const activeSection = useMenuStore((state) => state.activeSection);
   const header = useRef<HTMLElement | null>(null);
@@ -58,11 +58,10 @@ const Header = () => {
   }, [data.y]);
 
   const scrollToSection = (targetSection: string) => {
-    console.log("section", targetSection);
     if (path !== "/") router.push("/");
     gsap.to(window, {
       duration: 1,
-      delay: 0.2,
+      delay: 0.5,
       scrollTo: { y: targetSection, offsetY: 93 },
       ease: "power2",
     });
@@ -95,7 +94,7 @@ const Header = () => {
                 <li
                   key={item?.id}
                   className={`after:transition-width relative after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-white after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full lg:text-xl ${
-                    activeSection === item?.id && "after:w-full"
+                    activeSection === item?.id && path === "/" && "after:w-full"
                   }`}
                 >
                   <button
@@ -114,7 +113,7 @@ const Header = () => {
               className="relative hidden w-[174px] text-white md:block"
             >
               <div className="from-2% bg-gradient-4 absolute -inset-[1px] overflow-hidden rounded-lg md:rounded-[10px]"></div>
-              <div className="relative flex h-12 w-full items-center justify-center overflow-hidden rounded-lg bg-dark-gray [text-shadow:_0rem_0rem_0.688rem_rgb(255_255_255_/57%)] md:rounded-[10px]  ">
+              <div className="relative flex h-12 w-full items-center justify-center overflow-hidden rounded-lg bg-dark-gray [text-shadow:_0rem_0rem_0.688rem_rgb(255_255_255_/57%)] md:rounded-[10px] lg:text-xl  ">
                 Contact Us
               </div>
             </Link>
