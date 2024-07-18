@@ -27,13 +27,15 @@ const Clients = () => {
           {clientsData?.map((data) => (
             <li
               key={data?.id}
-              className="mx-2 max-w-[17.938rem] flex-1 rounded-2xl border bg-dark-silver/20 px-[1.125rem] py-[1.563rem]"
+              className="mx-2 max-w-[20.375rem] flex-1 rounded-2xl border bg-dark-silver/20 px-[1.125rem] py-[1.563rem]"
             >
               <h4 className="text-2xl font-semibold lg:text-[1.75rem]">
                 {data?.name}
               </h4>
 
-              <p className="mt-3 lg:text-lg">{data?.description}</p>
+              <p className="mt-3 !leading-tight lg:text-lg">
+                {data?.description}
+              </p>
             </li>
           ))}
         </ul>
