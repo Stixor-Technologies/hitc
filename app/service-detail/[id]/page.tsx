@@ -41,10 +41,10 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
         </div>
       ) : !loading && service ? (
         <>
-          <section className="bg-cover bg-no-repeat py-[198px] md:bg-[url('/assets/services/service-detail-bg.svg')] lg:pb-[200px] lg:pt-[222px]">
+          <section className="bg-cover bg-no-repeat pb-28 pt-[12.375rem] md:bg-[url('/assets/services/service-detail-bg.svg')] lg:pb-[12.5rem] lg:pt-[13.875rem]">
             <div className="container">
               <div className="flex flex-col items-center gap-5 text-center lg:gap-8">
-                <h2 className="text-4xl !leading-none lg:text-[64px] ">
+                <h2 className="text-4xl !leading-none lg:text-[4rem] ">
                   Software Development{" "}
                 </h2>
                 <p className="lg:text-xl">
@@ -71,7 +71,7 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
             <div>
               <div className="flex flex-col justify-between gap-2 text-center sm:flex-row sm:gap-0">
                 <h4 className=" text-5xl">Technologies</h4>
-                <p className="sm:max-w-[286px] sm:text-right">
+                <p className="sm:max-w-[17.875rem] sm:text-right">
                   Our experts utilize the latest frameworks and technologies
                 </p>
               </div>
@@ -103,14 +103,14 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
             </div>
 
             {/* Offers */}
-            <div className="my-[107px] flex  flex-col justify-between gap-14 lg:flex-row">
+            <div className="my-[6.688rem] flex  flex-col justify-between gap-14 lg:flex-row">
               <Image
                 src={Offers}
                 width={614}
                 alt="offerss"
-                className=" self-center lg:max-w-[470px] xl:max-w-[614px]"
+                className=" self-center lg:max-w-[29.375rem] xl:max-w-[38.375rem]"
               />
-              <ul className="grid grid-cols-[repeat(auto-fill,_minmax(17rem,_1fr))] flex-col gap-6 lg:flex lg:max-w-[594px] lg:gap-4">
+              <ul className="grid grid-cols-[repeat(auto-fill,_minmax(17rem,_1fr))] flex-col gap-6 lg:flex lg:max-w-[37.125rem] lg:gap-4">
                 {[1, 2, 3, 4]?.map((offer, index) => (
                   <li
                     key={index}
