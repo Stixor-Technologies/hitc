@@ -1,4 +1,13 @@
-import { Testimony, FaqItem } from "./types";
+import {
+  Testimony,
+  FaqItem,
+  ServiceItem,
+  TeamItem,
+  ClientItem,
+  Service,
+} from "./types";
+import Mission from "@/public/assets/homepage/mission.svg";
+import Vision from "@/public/assets/homepage/vision.svg";
 import Member1 from "@/public/assets/homepage/member-1.png";
 import Member2 from "@/public/assets/homepage/member-2.png";
 import CloudSolution from "@/public/assets/services/cloud-solutions.svg";
@@ -7,16 +16,33 @@ import DigitalMaketing from "@/public/assets/services/digital-marketing.svg";
 import HomeSolution from "@/public/assets/services/home-solutions.svg";
 import ManagedServices from "@/public/assets/services/managed-services.svg";
 import UIUX from "@/public/assets/services/ui-ux.svg";
-import { profile } from "console";
 
-const clientImages = [
+const clientImages: string[] = [
   "/assets/homepage/client-1.png",
   "/assets/homepage/client-2.png",
   "/assets/homepage/client-3.png",
   "/assets/homepage/client-4.png",
 ];
 
-const clientsData = [
+const aboutData = [
+  {
+    id: 1,
+    name: "Our Mission",
+    descrption:
+      "To empower our clients through an actively collaborative approach of transparency, ownership and quality.",
+    icon: Mission,
+  },
+
+  {
+    id: 2,
+    name: "Our Vision",
+    descrption:
+      "To revolutionize businesses through innovative solutions, fostering growth and success in a dynamic digital landscape.",
+    icon: Vision,
+  },
+];
+
+const clientsData: ClientItem[] = [
   {
     id: 1,
     name: "SMEs",
@@ -53,7 +79,7 @@ const clientsData = [
   },
 ];
 
-const teamData = [
+const teamData: TeamItem[] = [
   {
     id: 1,
     name: "Yusuf Fahad Bin Ibrahim Alhabeeb",
@@ -143,7 +169,7 @@ const faqData: FaqItem[] = [
   },
 ];
 
-const servicesData = [
+const servicesList: ServiceItem[] = [
   {
     id: "cloud-solution",
     icon: CloudSolution,
@@ -188,11 +214,109 @@ const servicesData = [
   },
 ];
 
+const servicesData: Service[] = [
+  {
+    id: "cloud-solution",
+    name: "Cloud Solution",
+    description:
+      "Our experienced development team specializes in creating customized software solutions that drive efficiency, innovation, and growth. From web and mobile applications to enterprise software and bespoke solutions, we have the expertise to deliver scalable, user-friendly, and high-performance software that aligns with your organizational goals.",
+    technologies: [
+      CloudSolution,
+      SoftwareDevelopment,
+      CloudSolution,
+      SoftwareDevelopment,
+      CloudSolution,
+      CloudSolution,
+      SoftwareDevelopment,
+      CloudSolution,
+      SoftwareDevelopment,
+      CloudSolution,
+      CloudSolution,
+      CloudSolution,
+      SoftwareDevelopment,
+      CloudSolution,
+      SoftwareDevelopment,
+      CloudSolution,
+    ],
+    testimonials: [
+      {
+        id: 1,
+        imageUrl: "/assets/testimonials/phill-mantis.png",
+        name: "Zoe Mantis",
+        designation: "Founder, Alpha Group",
+        testimony:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      },
+
+      {
+        id: 2,
+        imageUrl: "/assets/testimonials/don-joe.png",
+        name: "Don Joe",
+        designation: "Founder, Alpha Group",
+        testimony:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      },
+
+      {
+        id: 3,
+        imageUrl: "/assets/testimonials/zoe-mantis.png",
+        name: "Zoe Mantis",
+        designation: "Founder, Alpha Group",
+        testimony:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      },
+
+      {
+        id: 4,
+        imageUrl: "/assets/testimonials/phill-mantis.png",
+        name: "Zoe Mantis",
+        designation: "Founder, Alpha Group",
+        testimony:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "How flexible are HITC membership plans?",
+        answer:
+          "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+      },
+      {
+        id: 2,
+        question: "How flexible are HITC membership plans?",
+        answer:
+          "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+      },
+      {
+        id: 3,
+        question: "How flexible are HITC membership plans?",
+        answer:
+          "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+      },
+      {
+        id: 4,
+        question: "How flexible are HITC membership plans?",
+        answer:
+          "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+      },
+      {
+        id: 5,
+        question: "How flexible are HITC membership plans?",
+        answer:
+          "Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.",
+      },
+    ],
+  },
+];
+
 export {
+  aboutData,
   clientImages,
   clientsData,
   teamData,
   testimonialsData,
   faqData,
+  servicesList,
   servicesData,
 };
