@@ -112,7 +112,7 @@ const Header = () => {
               href={"/contact-us"}
               className="relative hidden w-[10.875rem] text-white md:block"
             >
-              <div className=" bg-gradient-4 absolute -inset-[1px] overflow-hidden rounded-lg md:rounded-[0.625rem]"></div>
+              <div className=" absolute -inset-[1px] overflow-hidden rounded-lg bg-gradient-4 md:rounded-[0.625rem]"></div>
               <div className="relative flex h-12 w-full items-center justify-center overflow-hidden rounded-lg bg-dark-gray duration-300 [text-shadow:_0rem_0rem_0.688rem_rgb(255_255_255_/57%)] hover:bg-opacity-90 md:rounded-[0.625rem] lg:text-xl  ">
                 Contact Us
               </div>
