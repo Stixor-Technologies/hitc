@@ -95,7 +95,7 @@ const HeroHome = () => {
             alt="homepage-table"
             className="col-span-full col-start-2 row-start-2"
           />
-          <div className="col-span-full row-start-4 mt-4 hidden min-w-[16.188rem] self-start rounded-2xl bg-white p-3 sm:col-span-1 sm:row-start-3 sm:block sm:max-w-[16.188rem]  md:col-span-full md:row-start-3 md:mt-3 md:max-w-full md:self-start lg:rounded-3xl lg:px-4 lg:py-[1.125rem] mxl:col-span-1 mxl:row-start-2 mxl:max-w-[16.188re,] mxl:self-end">
+          <div className="col-span-full row-start-4 mt-4 hidden min-w-[16.188rem] self-start rounded-2xl bg-white p-3 sm:col-span-1 sm:row-start-3 sm:block sm:max-w-[16.188rem]  md:col-span-full md:row-start-3 md:mt-3 md:max-w-full md:self-start lg:rounded-3xl lg:px-4 lg:py-[1.125rem] mxl:col-span-1 mxl:row-start-2 mxl:max-w-[16.188rem] mxl:self-end">
             <h4 className="font-semibold text-black">Our happy Clients</h4>
             <Image src={Rating} width={84} alt="rating" />
             <div className="flex items-center justify-between gap-2.5 sm:justify-start">
@@ -115,8 +115,13 @@ const HeroHome = () => {
                 ))}
               </div>
 
-              <div className="flex gap-2.5">
-                <Image src={Arrow} width={21} alt="arrow" />
+              <div className="group flex cursor-pointer gap-2.5">
+                <Image
+                  src={Arrow}
+                  width={21}
+                  alt="arrow"
+                  className=" duration-300 group-hover:translate-x-1.5"
+                />
                 <span className=" text-sm text-black"> View all</span>
               </div>
             </div>
