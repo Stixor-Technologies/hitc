@@ -47,7 +47,7 @@ const Header = () => {
   useEffect(() => {
     const _classList = [];
 
-    if (data.y > 60) {
+    if (data.y > 20) {
       _classList.push("bg-black");
       setPaddingClass("py-[1rem]");
     } else {
