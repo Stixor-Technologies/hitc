@@ -48,7 +48,7 @@ const Team = () => {
               <div
                 className={`content rounded-[1.688rem] ${index === 1 && "md:mt-[16.5rem]"}`}
               >
-                <div className="front rounded-[1.688rem] shadow-custom-white">
+                <div className="front overflow-hidden rounded-[1.688rem] bg-black shadow-custom-white">
                   <Image
                     src={teamMember?.profileImage}
                     width={406}

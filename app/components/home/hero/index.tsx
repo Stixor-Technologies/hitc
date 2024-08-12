@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { clientImages } from "@/app/utils/data";
 import Graph from "@/public/assets/homepage/graph.svg";
 import Rating from "@/public/assets/homepage/rating.png";
 import Fiction from "@/public/assets/homepage/fiction.png";
@@ -14,6 +13,7 @@ import Facebook from "@/public/assets/homepage/facebook.svg";
 import LinkButton from "../../shared/link-button/link-button";
 import useSectionInView from "@/app/utils/useSectionInView";
 import { useScrollToSection } from "@/app/utils/scroll";
+import PlaceholderProfile from "@/public/assets/placeholder-profile.png";
 
 const HeroHome = () => {
   const { ref } = useSectionInView("#home");
@@ -97,16 +97,16 @@ const HeroHome = () => {
           />
           <div className="col-span-full row-start-4 mt-4 hidden min-w-[16.188rem] self-start rounded-2xl bg-white p-3 sm:col-span-1 sm:row-start-3 sm:block sm:max-w-[16.188rem]  md:col-span-full md:row-start-3 md:mt-3 md:max-w-full md:self-start lg:rounded-3xl lg:px-4 lg:py-[1.125rem] mxl:col-span-1 mxl:row-start-2 mxl:max-w-[16.188rem] mxl:self-end">
             <h4 className="font-semibold text-black">Our happy Clients</h4>
-            <Image src={Rating} width={84} alt="rating" />
+            <Image src={Rating} width={84} alt="rating" className="mb-1" />
             <div className="flex items-center justify-between gap-2.5 sm:justify-start">
               <div className="flex">
-                {clientImages?.map((data, index) => (
+                {[1, 2, 3, 4]?.map((data, index) => (
                   <div
                     key={index}
                     className={`relative size-10 overflow-hidden rounded-full ${index !== 0 && "-ml-3"}`}
                   >
                     <Image
-                      src={data}
+                      src={PlaceholderProfile}
                       fill
                       alt={`client-image-${index}`}
                       className="absolute object-cover"
@@ -130,16 +130,16 @@ const HeroHome = () => {
 
         <div className="mt-4 min-w-[16.188rem] rounded-2xl bg-white p-3 sm:hidden sm:max-w-[16.188rem]  md:mt-0 md:max-w-full lg:rounded-3xl lg:px-4 lg:py-[1.125rem] mxl:max-w-[16.188rem]">
           <h4 className="font-semibold text-black">Our happy Clients</h4>
-          <Image src={Rating} width={84} alt="rating" />
+          <Image src={Rating} width={84} alt="rating" className="mb-1" />
           <div className="flex items-center justify-between gap-2.5 sm:justify-start">
             <div className="flex">
-              {clientImages?.map((data, index) => (
+              {[1, 2, 3, 4]?.map((data, index) => (
                 <div
                   key={index}
                   className={`relative size-10 overflow-hidden rounded-full ${index !== 0 && "-ml-3"}`}
                 >
                   <Image
-                    src={data}
+                    src={PlaceholderProfile}
                     fill
                     alt={`client-image-${index}`}
                     className="absolute object-cover"

@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FreeMode, Pagination } from "swiper/modules";
 import { Testimony } from "@/app/utils/types";
+import PlaceholderProfile from "@/public/assets/placeholder-profile.png";
 
 interface TestimonialsProps {
   testimonials: Testimony[];
@@ -39,7 +40,7 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
                     <div className="flex items-center gap-5">
                       <div className="relative size-11 overflow-hidden rounded-full">
                         <Image
-                          src={testimony?.imageUrl}
+                          src={PlaceholderProfile}
                           fill
                           alt={`testimony-${testimony?.name}`}
                           className="absolute object-cover"
@@ -47,13 +48,10 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
                       </div>
                       <div className="text-stixor-secondary text-left">
                         <h4 className="text-white">{testimony?.name}</h4>
-                        <h5 className="mt-1 text-xs">
-                          {testimony?.designation}
-                        </h5>
                       </div>
                     </div>
 
-                    <p className="mt-7 lg:text-lg">{testimony?.testimony}</p>
+                    <p className="mt-5 lg:text-lg">{testimony?.testimony}</p>
                   </li>
                 </SwiperSlide>
               );

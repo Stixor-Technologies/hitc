@@ -2,9 +2,7 @@ import { StaticImageData } from "next/image";
 
 interface Testimony {
   id: number;
-  imageUrl: string;
   name: string;
-  designation: string;
   testimony: string;
 }
 
@@ -39,8 +37,13 @@ interface Service {
   id: string;
   name: string;
   description: string;
+  detailImage: StaticImageData;
+  services: {
+    id: number;
+    name: string;
+    description: string;
+  }[];
   technologies: StaticImageData[];
-  testimonials: Testimony[];
   faq: FaqItem[];
 }
 

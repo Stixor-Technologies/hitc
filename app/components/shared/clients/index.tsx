@@ -17,9 +17,12 @@ const Clients = () => {
       <div className="container">
         <h2 className="text-3xl lg:text-5xl">Our Clients</h2>
         <p className="mt-3 w-full max-w-[55.938rem] lg:mt-6 lg:text-xl">
-          Lorem ipsum dolor sit amet consectetur. Vestibulum id turpis ipsum
-          eget risus. Ut aenean blandit fringilla in morbi adipiscing duis
-          rhoncus tincidunt.
+          At HITC, we empower a dynamic mix of clients, from emerging startups
+          to industry leaders, with bespoke digital solutions that fuel their
+          success. Their success stories are a testament to our commitment to
+          excellence and collaboration. We value these partnerships and are
+          dedicated to driving results that exceed expectations, ensuring that
+          every client achieves their unique business goals.
         </p>
       </div>
       <Marquee speed={120} autoFill loop={0} pauseOnHover>

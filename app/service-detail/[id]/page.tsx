@@ -8,9 +8,7 @@ import "swiper/css/navigation";
 import { FreeMode } from "swiper/modules";
 import { Service } from "@/app/utils/types";
 import Image from "next/image";
-import Offers from "@/public/assets/services/offers.png";
 import { servicesData } from "@/app/utils/data";
-import Testimonials from "@/app/components/shared/testimonials";
 import Faq from "@/app/components/shared/faq";
 import ContactForm from "@/app/components/shared/contact-form";
 import Spinner from "@/app/components/shared/spinner/spinner";
@@ -86,13 +84,18 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
                     freeMode={true}
                     modules={[FreeMode]}
                     spaceBetween={25}
-                    className="!overflow-visible"
+                    className="techologies-swiper !overflow-visible"
                   >
                     {service?.technologies?.map((technology, index) => {
                       return (
                         <SwiperSlide key={index} className={`max-w-[7rem]`}>
                           <li>
-                            <Image src={technology} alt="technology" />
+                            <Image
+                              src={technology}
+                              width={`${(id === "software-development" || id === "managed-services") && index === service?.technologies?.length - 1 ? 120 : 70}`}
+                              alt="technology"
+                              className=""
+                            />
                           </li>
                         </SwiperSlide>
                       );
@@ -103,38 +106,30 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
             </div>
 
             {/* Offers */}
-            <div className="my-[6.688rem] flex  flex-col justify-between gap-14 lg:flex-row">
+            <div className="mt-28 flex flex-col justify-between  gap-14 lg:my-[6.688rem] lg:flex-row">
               <Image
-                src={Offers}
-                width={614}
+                src={service?.detailImage}
                 alt="offerss"
-                className=" self-center lg:max-w-[29.375rem] xl:max-w-[38.375rem]"
+                className=" self-center rounded-2xl lg:max-w-[29.375rem] xl:max-w-[39.375rem] 2xl:max-w-[44rem]"
               />
-              <ul className="grid grid-cols-[repeat(auto-fill,_minmax(17rem,_1fr))] flex-col gap-6 lg:flex lg:max-w-[37.125rem] lg:gap-4">
-                {[1, 2, 3, 4]?.map((offer, index) => (
+              <ul className="grid grid-cols-[repeat(auto-fill,_minmax(17rem,_1fr))] flex-col gap-6 self-start lg:flex lg:max-w-[37.125rem] lg:gap-4">
+                {service?.services?.map((offer, index) => (
                   <li
                     key={index}
                     className="flex-1 rounded-2xl border-[0.5px] bg-dark-silver/20 px-5 py-6 lg:px-4 lg:py-4 xl:px-8 xl:py-6"
                   >
                     <h4 className="font-bold !leading-none lg:text-xl">
-                      Custom Software Development
+                      {offer?.name}
                     </h4>
 
                     <p className="mt-2 text-sm !leading-tight lg:mt-4">
-                      Our custom web development solutions accelerate workflows,
-                      boost revenues, and optimize business operations from
-                      concept-to-code and development-to-deployment.
+                      {offer?.description}
                     </p>
                   </li>
                 ))}
               </ul>
             </div>
           </section>
-
-          {/* Testimonials */}
-          {service?.testimonials && (
-            <Testimonials testimonials={service?.testimonials} />
-          )}
 
           {/* faq's */}
           {service?.faq && <Faq faqs={service?.faq} />}

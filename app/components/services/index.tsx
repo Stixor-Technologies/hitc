@@ -28,9 +28,9 @@ const Services = () => {
               </span>
             </h2>
             <p className="lg:text-xl">
-              Lorem ipsum dolor sit amet consectetur. Vestibulum id turpis ipsum
-              eget risus. Ut aenean blandit fringilla in morbi adipiscing duis
-              rhoncus tincidunt.
+              We empower your growth by blending creativity with cutting-edge
+              technology, ensuring your success in today&apos;s competitive
+              market.
             </p>
           </div>
           {servicesList?.map((service, index) => (

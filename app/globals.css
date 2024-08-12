@@ -75,3 +75,7 @@ body {
 .content:hover .back {
   transform: rotateY(0deg);
 }
+
+.techologies-swiper .swiper-wrapper {
+  @apply !items-center;
+}
