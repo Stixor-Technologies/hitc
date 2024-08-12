@@ -32,7 +32,7 @@ const AboutUs = () => {
             <div className="back flex items-center rounded-2xl bg-text-gradient-3 px-7 py-7 lg:!rounded-[2.063rem] lg:py-14 xs:rounded-3xl">
               <div className="inner">
                 <h2 className="text-2xl font-extrabold !leading-tight sm:!text-5xl md:!text-3xl lg:!text-5xl xs:text-4xl">
-                  Houghton International Technical College
+                  Habeeb Information Technology Company
                 </h2>
               </div>
             </div>
