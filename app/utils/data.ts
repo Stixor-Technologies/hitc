@@ -21,7 +21,7 @@ import CloudSolutionDetail from "@/public/assets/services/cloud-solutions.jpg";
 import SoftwareDevelopmentDetail from "@/public/assets/services/software-development.jpg";
 import ManagedServicesDetail from "@/public/assets/services/managed-services.jpg";
 import SmartSolutionsDetail from "@/public/assets/services/smart-solutions.jpg";
-import DigitalMarketingDetail from "@/public/assets/services/digital-marketing.svg";
+import DigitalMarketingDetail from "@/public/assets/services/marketing.jpg";
 import UIUXDetail from "@/public/assets/services/ui-ux.jpg";
 
 import Aws from "@/public/assets/services/technologies/aws.svg";

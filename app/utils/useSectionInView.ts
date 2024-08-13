@@ -11,7 +11,6 @@ const useSectionInView = (sectionId?: string) => {
 
   useEffect(() => {
     if (inView && sectionId) {
-      console.log(inView, "sectionId", sectionId);
       setActiveSection(sectionId);
     } else {
       setActiveSection("");

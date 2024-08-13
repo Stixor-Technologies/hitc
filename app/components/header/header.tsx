@@ -62,7 +62,7 @@ const Header = () => {
     gsap.to(window, {
       duration: 1,
       delay: path !== "/" ? 0.5 : 0,
-      scrollTo: { y: targetSection, offsetY: 93 },
+      scrollTo: { y: targetSection, offsetY: 83 },
       ease: "power2",
     });
   };

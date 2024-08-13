@@ -27,7 +27,12 @@ const AboutUs = () => {
             className={`content mx-auto max-w-[36.188rem] md:mx-0 md:min-w-[24.375rem] lg:min-w-[32.5rem] xl:w-[34.625rem] xl:min-w-[34.625rem]`}
           >
             <div className="front min-w-[17.5rem] overflow-hidden rounded-2xl lg:!rounded-[2.063rem] xs:rounded-3xl">
-              <Image src={About} width={554} alt="member-1" />
+              <Image
+                src={About}
+                width={554}
+                alt="member-1"
+                className="bg-white"
+              />
             </div>
             <div className="back flex items-center rounded-2xl bg-text-gradient-3 px-7 py-7 lg:!rounded-[2.063rem] lg:py-14 xs:rounded-3xl">
               <div className="inner">
