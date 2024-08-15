@@ -43,16 +43,10 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
             <div className="container">
               <div className="flex flex-col items-center gap-5 text-center lg:gap-8">
                 <h2 className="text-4xl !leading-none lg:text-[4rem] ">
-                  Software Development{" "}
+                                   {service?.name}
                 </h2>
                 <p className="lg:text-xl">
-                  Our experienced development team specializes in creating
-                  customized software solutions that drive efficiency,
-                  innovation, and growth. From web and mobile applications to
-                  enterprise software and bespoke solutions, we have the
-                  expertise to deliver scalable, user-friendly, and
-                  high-performance software that aligns with your organizational
-                  goals.
+                 {service?.description}
                 </p>
                 <LinkButton
                   as={"button"}
