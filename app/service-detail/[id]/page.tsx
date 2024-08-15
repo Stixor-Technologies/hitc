@@ -43,11 +43,9 @@ const ServiceDetail = ({ params: { id } }: ServiceDetailParams) => {
             <div className="container">
               <div className="flex flex-col items-center gap-5 text-center lg:gap-8">
                 <h2 className="text-4xl !leading-none lg:text-[4rem] ">
-                                   {service?.name}
+                  {service?.name}
                 </h2>
-                <p className="lg:text-xl">
-                 {service?.description}
-                </p>
+                <p className="lg:text-xl">{service?.description}</p>
                 <LinkButton
                   as={"button"}
                   text="Book a Consultation"
