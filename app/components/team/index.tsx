@@ -52,7 +52,9 @@ const Team = () => {
                   <Image
                     src={teamMember?.profileImage}
                     width={406}
+                    height={522}
                     alt="member-1"
+                    className="aspect-[406/522] object-cover"
                   />
                 </div>
                 <div className="back rounded-[1.688rem] bg-text-gradient-3 px-7 pt-7 shadow-custom-white lg:pt-14">
