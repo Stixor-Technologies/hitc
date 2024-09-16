@@ -9,7 +9,7 @@ import {
 import Mission from "@/public/assets/homepage/mission.svg";
 import Vision from "@/public/assets/homepage/vision.svg";
 import Member1 from "@/public/assets/homepage/member-1.jpg";
-import Member2 from "@/public/assets/homepage/member-2.png";
+import Member2 from "@/public/assets/homepage/member-2.jpg";
 import CloudSolution from "@/public/assets/services/cloud-solutions.svg";
 import SoftwareDevelopment from "@/public/assets/services/software-development.svg";
 import DigitalMaketing from "@/public/assets/services/digital-marketing.svg";
